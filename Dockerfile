@@ -10,6 +10,8 @@ COPY derby-10.10.1.1.jar /opt/ibm/wlp/usr/shared/resources/Daytrader7SampleDerby
 
 COPY initializeDB.sh /opt
 
+USER root
+
 RUN chmod 775 /opt/initializeDB.sh
 
 RUN installUtility install --acceptLicense defaultServer
